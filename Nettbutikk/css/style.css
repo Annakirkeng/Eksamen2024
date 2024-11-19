@@ -1,0 +1,173 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0ece9;
+}
+
+
+.global-header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between; /* Legger mellomrom mellom seksjonene */
+    gap: 10px; /* Alternativ: definer mellomrom med gap */
+}
+
+.menu-søk {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.menu-søk input[type="search"] {
+    width: 100%;
+    padding: 10px 40px 10px 10px; /* Juster padding for å gi plass til ikonet */
+    box-sizing: border-box;
+}
+.menu-søk i{
+    position: absolute;
+    right: 10px;
+}
+
+.main-menu a{
+    text-decoration: none;
+    color: black;
+}
+.main-menu{
+    list-style: none;
+}
+
+
+.menu-ikon a{
+    color: black;
+}
+
+#kategorier{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#mansory-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 like brede kolonner */
+    grid-template-rows: repeat(3, 200px); /* 3 rader med fast høyde */
+    gap: 20px; /* Mellomrom mellom elementene */
+    width: 90%;
+    max-width: 1200px;
+    margin: auto; /* Sentrerer layouten */
+}
+
+#category1{
+    background-color: hsl(146, 52%, 72%);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#category2{
+    background-color: hsl(146, 52%, 72%);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#category3{
+    background-color: hsl(146, 52%, 72%);
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+#category4{
+    background-color: hsl(146, 52%, 72%);
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+#category5{
+    background-color: hsl(146, 52%, 72%);
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+footer{
+    height: 500px;
+    color: rgb(0, 0, 0);
+    padding: 3rem;
+    width: 100%;
+    margin-top: 20rem;
+}
+
+footer h3{
+    font-weight: 10;
+}
+
+footer a{
+    color: rgb(4, 3, 3);
+    text-decoration: none;
+}
+
+.logo-footer{
+    width: 100%;
+    padding: 0px 0px 1px 1px;
+
+}
+.logo-footer h3{
+    font-size: 2rem;
+    margin: 0;
+}
+.logo-footer p{
+    padding: 0;
+}
+
+.info-footer{
+    display: flex;
+    justify-content: space-between; /* Legger mellomrom mellom seksjonene */
+    gap: 10px; /* Alternativ: definer mellomrom med gap */
+}
+
+.kontakt-footer{
+    width: 50%;
+    align-items: center;
+}
+
+.kontakt-ikon{
+    display: flex;
+    align-items: center;
+}
+.kontakt-ikon .bold-text {
+    font-weight: bold;
+}
+.kontakt-footer i{
+    margin-right: 10px;
+}
+.kontakt.bold{
+    font-weight: bold;
+}
+
+.snarvei-footer{
+    width: 25%;
+    padding: 0 2rem;
+}
+.snarvei-footer a{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0;
+}
+
+.sosiale-footer{
+    width: 25%;
+    padding: 0 2rem;
+}
+.sosiale-footer a{
+    padding: 0.5rem;
+}
