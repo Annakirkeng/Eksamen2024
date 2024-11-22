@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="ikoner/css/fontawesome.css" rel="stylesheet" />
-    <link href="ikoner/css/brands.css" rel="stylesheet" />
-    <link href="ikoner/css/solid.css" rel="stylesheet" />
+    <link href="ikoner/css/fontawesome.css" rel="stylesheet">
+    <link href="ikoner/css/brands.css" rel="stylesheet">
+    <link href="ikoner/css/solid.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Kasse</title>
 </head>
 <body>
     <div id="grid-container">
-        <header class="global-header">
+        <header id="global-header">
             <form class="menu-søk">
                 <input type="search" placeholder="Søk her" id="search">
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -32,8 +32,8 @@
             </section>
         </header>
         <main>
-            <h2>Kasse</h2>
-            <section>
+            <h2 id="kasse">Kasse</h2>
+            <section id="shopping-box">
                 <h2>1.SHOPPINGBAGEN DIN</h2>
                 <article>
                     <img src="img/dress427x640.jpg" alt="dress">
@@ -84,95 +84,122 @@
                     </form>
                 </article>
             </section>
-            <section>
+
+
+            <section id="opplysnings-box">
                 <h2>2.DINE OPPLYSNINGER</h2>
-                <p>Leveringsadresse</p>
+                <section class="seksjon-opp">
+                <p class="opplysning-title">Leveringsadresse</p>
                 <form method="post">
+                    <section id="navn-box">
                     <label>
                         Fornavn:
-                        <input type="text" name="fornavn" placeholder="Nora" pattern="[A-Za-zæøåÆØÅ ]{2,}" required>
+                        <input type="text" name="fornavn" placeholder="Nora" pattern="[A-Za-zæøåÆØÅ ]{2,}" required class="liten-box">
                     </label>
                     <label>
                         Etternavn:
-                        <input type="text" name="etternavn" placeholder="Nordman" pattern="[A-Za-zæøåÆØÅ ]{2,}" required>
+                        <input type="text" name="etternavn" placeholder="Nordman" pattern="[A-Za-zæøåÆØÅ ]{2,}" required class="liten-box">
                     </label>
+                    </section>
                     <label>
                         Gateadresse:
-                        <input type="text" name="gateadresse" placeholder="B R A VEIEN 4" pattern="[A-Za-zæøåÆØÅ ]{2,}" required>
+                        <input type="text" name="gateadresse" placeholder="B R A VEIEN 4" pattern="[A-Za-zæøåÆØÅ ]{2,}" required class="stor-box">
                     </label>
+                    <section id="post-box">
                     <label>
                         Postnummer:
-                        <input type="number" name="postnummer" placeholder="1752" min="1000" max="9999" required>
+                        <input type="number" name="postnummer" placeholder="1752" min="1000" max="9999" required class="liten-box">
                     </label>
                     <label>
                         Poststed:
-                        <input type="text" name="Poststed" placeholder="Halden" pattern="[A-Za-zæøåÆØÅ ]{2,}" required>
+                        <input type="text" name="Poststed" placeholder="Halden" pattern="[A-Za-zæøåÆØÅ ]{2,}" required class="liten-box">
                     </label>
-                    <p>Kontaktinformasjon</p>
+                    </section>
+                </form> 
+                </section>
+                <section class="seksjon-opp">
+                    <p class="opplysning-title">Kontaktinformasjon</p>
+                <form>
                     <label>
                         E-post:
-                        <input type="email" name="email" placeholder="Noranordman@hiof.no" required>
+                        <input type="email" name="email" placeholder="Noranordman@hiof.no" required class="stor-box">
                     </label>
                     <label>
                         Telefon:
-                        <input type="tel" name="telefon" placeholder="+47 123 45 678" pattern="[0-9]{8,12}" required>
+                        <input type="tel" name="telefon" placeholder="+47 123 45 678" pattern="[0-9]{8,12}" required class="stor-box">
                     </label>
                     <label>
                         <input type="submit" value="Lagre">
                     </label>
                 </form>
-                <a href="#">Avbryt</a>
+                </section>
+                <a href="#" id="avbryt">Avbryt</a>
             </section>
-            <section>
+
+            <section id="levering-box">
                 <h2>3.LEVERING</h2>
-                <p>LEVERINGSVALG</p>
+                <p id="leveringsvalg">LEVERINGSVALG</p>
                 <form method="post">
+                    <section class="levering-b">
                     <label>
+                        <input type="radio" name="valg" required>
                         Express Hjemlevering:
-                        <input type="radio" name="valg" required>
                     </label>
-                        <i class="fa-solid fa-truck"></i>
+                        <section class="levering-ikon">
                         <p>59 kr</p>
-                        <p>3-4 Virkedager</p>
-                        <p>bestill hverdag før 08:00 for levering neste arbeidsdag. Leveres hjem til deg før frokost mandag til lørdag. For levering til postnummer 4000-7999 er leveringstiden 2 arbeidsdager, for postnummer 8000-9999 er leveringstiden 3 arbeidsdager.</p>
+                        <i class="fa-solid fa-truck"></i>
+                        </section>
+                        <p class="levering-dag">3-4 Virkedager</p>
+                        <p class="levering-info">bestill hverdag før 08:00 for levering neste arbeidsdag. Leveres hjem til deg før frokost mandag til lørdag. For levering til postnummer 4000-7999 er leveringstiden 2 arbeidsdager, for postnummer 8000-9999 er leveringstiden 3 arbeidsdager.</p>
+                    </section>
+                    <section class="levering-b">
                     <label>
+                        <input type="radio" name="valg" required>
                         Express Pakke til utleveringssted:
-                        <input type="radio" name="valg" required>
                     </label>
-                    <i class="fa-brands fa-dhl"></i>
+                    <section class="levering-ikon">
                     <p>59 kr</p>
-                    <p>1-3 Virkedager</p>
+                    <i class="fa-brands fa-dhl"></i>
+                    </section>
+                    <p class="levering-dag">1-3 Virkedager</p>
+                    </section>
+                    <section class="levering-b">
                     <label>
-                        Standard Hjemlevering:
                         <input type="radio" name="valg" required>
+                        Standard Hjemlevering:
                     </label>
-                        <i class="fa-solid fa-box"></i>
+                        <section class="levering-ikon">
                         <p>Gratis</p>
-                        <p>5-8 Virkedager</p>
-                        <p>Leveres hjem til deg før frokost mandag til lørdag innen 4-7 hverdager.</p>
+                        <i class="fa-solid fa-box"></i>
+                        </section>
+                        <p class="levering-dag">5-8 Virkedager</p>
+                        <p class="levering-info">Leveres hjem til deg før frokost mandag til lørdag innen 4-7 hverdager.</p>
+                    </section>
                 </form>
             </section>
-            <section>
+
+
+            <section id="betaling-box">
                 <h2>4.BETALING</h2>
-                <p>BETAL MED KORT</p>
-                <i class="fa-solid fa-credit-card"></i>
-                <form method="post">
-                    <label>
+                <p id="betal">BETAL MED KORT <i class="fa-solid fa-credit-card"></i></p>
+                <form id="betaling-form" method="post">
+                    <label class="kortnummer">
                         Kortnummer:
-                        <input type="number" name="kortnummer" placeholder="342342****4435" max="99999999999999" min="10000000000000" required>
+                        <input type="number" name="kortnummer" placeholder="342342****4435" max="99999999999999" min="10000000000000" required class="stor-box-beta">
                     </label>
-                    <label>
+                    <label class="utlopsdato">
                         Utløpsdato:
-                        <input type="date" name="utløpsdato" max="2030-12-31" required>
+                        <input type="date" name="utløpsdato" max="2030-12-31" required class="liten-box-beta">
                     </label>
-                    <label>
+                    <label class="cvc">
                         CVC/CVV:
-                        <input type="text" name="CVC/CVV" placeholder="CVC/CVV" required>
+                        <input type="text" name="CVC/CVV" placeholder="CVC/CVV" required class="liten-box-beta">
                     </label>
-                    <p>Å betale inkl. mva.</p>
-                    <p>31 998 kr</p>
+                    <p class="betaling-mva">Å betale inkl. mva.</p>
+                    <p class="betaling-total">31 998 kr</p>
                     <a href="#">Fullfør kjøp</a>
-                    <p>Du bekrefter herved at oppplysningene og dokumentene du har oppgitt er korrekte og fullstendige. Levrandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.</p>
+                    <p class="betaling-info">Du bekrefter herved at oppplysningene og dokumentene du har oppgitt er korrekte og fullstendige. Levrandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.</p>
+                    <section id="betaling-terms">
                     <label>
                         <input type="checkbox">
                         Ja takk! Send nyhetsbrev til meg.
@@ -181,11 +208,13 @@
                         <input type="checkbox">
                         Jeg ønsker å motta tekstmedlinger med tilbud og nyheter.
                     </label>
+                    </section>
                     </form>
                 </section>
         </main>
-
+        
         <footer> 
+            <hr>
             <section class="logo-footer">
                 <a href="index.html"><h3>Logo</h3></a>
                 <p>Aut reiciendis voluptatibus maiores</p>

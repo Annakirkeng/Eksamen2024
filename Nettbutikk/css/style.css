@@ -4,142 +4,445 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f0ece9;
 }
 
+h1{font-size: 2rem;}
+h2{font-size: 1.8rem;}
+h3{font-size: 1.6rem;}
+h4{font-size: 1.4rem;}
+p, a{font-size: 1rem;}
 
-.global-header{
+#grid-container{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto auto auto;
+    row-gap: 2rem;
+}
+
+#global-header{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2; 
+}
+#global-header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between; /* Legger mellomrom mellom seksjonene */
-    gap: 10px; /* Alternativ: definer mellomrom med gap */
 }
 
-.menu-søk {
+.menu-søk{
     position: relative;
     display: flex;
     align-items: center;
+    margin: 40px;
 }
 .menu-søk input[type="search"] {
-    width: 100%;
     padding: 10px 40px 10px 10px; /* Juster padding for å gi plass til ikonet */
     box-sizing: border-box;
+    border-radius: 20px;
+    border: 1px solid #ccc;
 }
 .menu-søk i{
     position: absolute;
-    right: 10px;
+    left: 200px;
 }
 
 .main-menu a{
     text-decoration: none;
     color: black;
+    padding: 1rem;
 }
-.main-menu{
+.main-menu ul{
+    display: flex;
+    align-items: center;
     list-style: none;
+    padding: 0;
 }
-
-
+h1{
+    font-size: xx-large;
+    padding: 0rem 3rem 0px 3rem;
+}
 .menu-ikon a{
     color: black;
 }
 
-#kategorier{
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#mansory-grid{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 like brede kolonner */
-    grid-template-rows: repeat(3, 200px); /* 3 rader med fast høyde */
-    gap: 20px; /* Mellomrom mellom elementene */
-    width: 90%;
-    max-width: 1200px;
-    margin: auto; /* Sentrerer layouten */
-}
-
-#category1{
-    background-color: hsl(146, 52%, 72%);
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-
-#category2{
-    background-color: hsl(146, 52%, 72%);
+main{
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
 }
 
-#category3{
-    background-color: hsl(146, 52%, 72%);
-    grid-column-start: 3;
-    grid-column-end: 4;
+
+#kasse{
+    text-align: center;
+}
+
+#shopping-box{
+    outline: 1px solid #888;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto auto auto;
+}
+
+
+
+
+
+
+
+#opplysnings-box {
+    outline: 1px solid #888;
+    border-radius: 8px;
+    width: 900px; /* Juster bredde på selve boksen*/
+    padding: 20px 30px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto auto auto;
+    place-items: center;
+}
+#opplysnings-box h2{
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+.opplysning-title{
+    text-align: left;
+    margin-bottom: 10px;
+    width: 100%;
+    grid-column-start: 2;
     grid-row-start: 2;
+}
+.seksjon-opp{
+    margin-bottom: 20px;
+} 
+
+#opplysnings-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Mellomrom mellom feltene */
+}
+#opplysnings-box label {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.liten-box{
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 195px;
+}
+.stor-box{
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 400px;
+}
+#navn-box, #post-box {
+    display: flex;
+    gap: 10px;
+}
+#opplysnings-box input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    width: 400px;
+}
+#avbryt{
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+#levering-box{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto auto auto;
+    outline: 1px solid #888;
+    border-radius: 8px;
+    width: 900px; /* Juster bredde på selve boksen*/
+    padding: 20px 30px;
+    margin: 0 auto;
+    align-items: center; 
+}
+#levering-box h2{
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+#leveringsvalg{
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+
+/* Styling for selve leveringsboksene */
+.levering-b {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    gap: 10px;
+    border: 1px solid #888;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 500px;
+    display: grid;
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+
+
+.levering-ikon {
+    display: flex; /* Plasserer ikon og pris side om side */
+    align-items: center; /* Sentraliserer vertikalt */
+    justify-content: flex-start;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    gap: 5px;
+    font-size: 16px;
+    margin: 10px 0; /* Litt mellomrom til andre elementer */
+}
+
+/* Styling for prisen */
+.levering-ikon p {
+    margin: 0;
+    font-size: 16px;
+}
+.levering-dag{
+    font-weight: bold;
+    color: #979797;
+    font-size: small;
+}
+
+
+/* Styling for ekstra leveringsinfo */
+.levering-info {
+    font-size: 12px;
+    margin: 0;
+}
+
+
+
+/* Betalingsseksjon som et grid */
+#betaling-box {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 20px;
+    outline: 1px solid #888;
+    border-radius: 8px;
+    width: 900px;
+    padding: 30px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Tittel "4. BETALING" */
+#betaling-box h2{
+    grid-column-start: 2; /* Spenner over begge kolonner */
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: left;
+   
+}
+
+/* "Betal med kort"-linjen */
+#betal {
+    grid-column-start: 2; /* Spenner over begge kolonner */
+    grid-row-start: 2;
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    gap: 10px;
+}
+
+/* Skjemaet */
+#betaling-form {
+    grid-column-start: 2; /* Spenner over begge kolonner */
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr; /* To kolonner */
+    gap: 20px;
+    width: 100%;
+}
+
+/* Form-elementer */
+#betaling-form label {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Betalingsinfo og Totalbeløp */
+.betaling-mva {
+   
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+}
+
+.betaling-total {
+    text-align: center;
+    text-align: bottom;
+    font-size: 26px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.betaling-mva .betaling-total{
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+
+/* Fullfør-knapp */
+#betaling-box a {
+    grid-column: 1/5;
+    grid-row-start: 5;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+/* Bekreftelsestekst */
+.betaling-info {
+    grid-column-start: 1;
+    grid-row-start: 6;
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0 20px 0;
+}
+
+/* Terms-seksjonen */
+#betaling-terms {
+    grid-column-start: 1;
+    grid-row-start: 7;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+#betaling-terms label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+#betaling-terms input[type="checkbox"] {
+    margin: 0; /* Sørger for at sjekkboksen ikke har ekstra margin */
+    padding: 0; /* Sørger for at padding ikke skyver ting */
+    display: inline-block;
+}
+
+.liten-box-beta{
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.stor-box-beta{
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.kortnummer{
+    grid-column: 1/5;
+    grid-row-start: 1;
+    text-align: left;
+}
+.utlopsdato{
+    grid-column: 1/3;
+    grid-row-start: 2;
+    
+}
+.cvc{
+    grid-column: 3/5;
+    grid-row-start: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
     grid-row-end: 4;
 }
-
-#category4{
-    background-color: hsl(146, 52%, 72%);
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 5;
+hr{
+    border-bottom: 1px solid #888; 
 }
-
-#category5{
-    background-color: hsl(146, 52%, 72%);
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 5;
-}
-
 footer{
     height: 500px;
     color: rgb(0, 0, 0);
     padding: 3rem;
     width: 100%;
-    margin-top: 20rem;
 }
-
+footer p{
+    margin: 0.5rem;
+}
 footer h3{
     font-weight: 10;
 }
-
 footer a{
     color: rgb(4, 3, 3);
     text-decoration: none;
 }
-
 .logo-footer{
     width: 100%;
-    padding: 0px 0px 1px 1px;
-
+    padding-top: 2rem;
+    padding-bottom: 1rem;
 }
 .logo-footer h3{
     font-size: 2rem;
     margin: 0;
 }
 .logo-footer p{
-    padding: 0;
+    padding-top: 1rem;
+    margin: 0;
 }
-
 .info-footer{
     display: flex;
     justify-content: space-between; /* Legger mellomrom mellom seksjonene */
     gap: 10px; /* Alternativ: definer mellomrom med gap */
 }
-
 .kontakt-footer{
     width: 50%;
     align-items: center;
 }
-
 .kontakt-ikon{
     display: flex;
     align-items: center;
@@ -153,21 +456,158 @@ footer a{
 .kontakt.bold{
     font-weight: bold;
 }
-
 .snarvei-footer{
     width: 25%;
-    padding: 0 2rem;
 }
 .snarvei-footer a{
     display: flex;
     flex-direction: column;
     padding: 0.5rem 0;
 }
-
 .sosiale-footer{
     width: 25%;
-    padding: 0 2rem;
 }
 .sosiale-footer a{
     padding: 0.5rem;
+} 
+
+#banner{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(212, 212, 212);
+    justify-content: space-between;
+    text-align: end;
+}
+
+#banner a{
+    text-decoration: none;
+    background-color: white;
+    color: #000000;
+}
+
+#pro-ingress{
+    text-align: center;
+}
+.button-pro2{
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    text-align: center;
+}
+.button-pro{
+    color: #000000;
+    outline: 1px solid #888;
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    text-align: center;
+}
+.button-pro2:hover{
+    background-color: rgb(193, 193, 193);
+}
+.button-pro:hover{
+    background-color: rgb(193, 193, 193);
+}
+.button-group{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+.product-space{
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     justify-content: center;
+     padding: 15px;
+     gap: 10px;
+}
+.product-card{
+    max-width: 350px;
+    min-width: 200px;
+    width: 100%;
+    border-radius: 4px;
+    padding: 1rem; 
+}
+.product-card a{
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+.product-card img{
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+
+
+
+
+
+#kate-grid{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    text-align: center;
+    padding: 30px 0;
+
+    grid-template-areas: 
+    "title title title"
+    "kate1 kate2 kate3"
+    "kate4 kate4 kate3"
+    "kate4 kate4 kate5";
+}
+
+#kategorier{
+   grid-area: title;
+}
+.category1{
+    grid-area: kate1;
+    background-image: url("/img/kategori1.jpg")
+}
+.category2{
+    grid-area: kate2;
+    background-image: url("/img/kategori2.jpg")
+}
+.category3{
+    grid-area: kate3;
+    background-image: url("/img/kategori3.jpg")
+}
+.category4{
+    grid-area: kate4;
+    background-image: url("/img/kategori4.jpg")
+}
+.category5{
+    grid-area: kate5;
+    background-image: url("/img/kategori5.jpg")
+}
+
+
+#anmelde-box{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+}
+.anme-card{
+    flex: 0 0 auto;
+    max-width: 350px;
+    min-width: 200px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10%;
+    padding: 1rem;
+}
+.anme-card img{
+    width: 90px;
+    max-width: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
 }
