@@ -1,113 +1,222 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body{
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-h1{font-size: 2rem;}
-h2{font-size: 1.8rem;}
-h3{font-size: 1.6rem;}
-h4{font-size: 1.4rem;}
-p, a{font-size: 1rem;}
+h2{
+    font-size: 22px;
+    text-align: center;
+}
 
 #grid-container{
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: auto auto auto;
-    row-gap: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    max-width: 349px;
 }
 
 #global-header{
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2; 
+    grid-column: 1;
+    grid-row: 1;
+    max-width: 349px;
 }
 #global-header{
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
-    padding: 0 20px;
+    padding: 1rem;
+    margin: 0;
+    gap: 1rem;
 }
 
 header{
-    display: flex;
-    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
 }
 
 .menu-søk{
-    position: relative;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    margin: 40px;
+    justify-content: center;
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
 }
 .menu-søk input[type="search"] {
-    padding: 10px 40px 10px 10px; /* Juster padding for å gi plass til ikonet */
-    box-sizing: border-box;
+    width: 100%;
+    padding: 0.5rem;
     border-radius: 20px;
     border: 1px solid #ccc;
+    text-align: center;
 }
 .menu-søk i{
     position: absolute;
-    left: 200px;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
 }
-
+.main-menu ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+}
 .main-menu a{
     text-decoration: none;
     color: black;
-    padding: 1rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    text-align: center;
 }
-.main-menu ul{
-    display: flex;
-    align-items: center;
-    list-style: none;
-    padding: 0;
-}
+
 h1{
-    font-size: xx-large;
-    padding: 0rem 3rem 0px 3rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center  ;
 }
 .menu-ikon a{
     color: black;
+    font-size: 1.2rem;
+}
+.menu-ikon{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    padding-top: 1rem;
 }
 
 main{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    padding: 1rem;
+    text-align: center;
+    grid-column: 1;
+    grid-row: 2;
 }
 
 
 #kasse{
     text-align: center;
+    margin-bottom: 1rem;
 }
-
-#shopping-box{
+#shopping-title{
+    margin: 2rem 0;
+}
+#shop-lin{
     outline: 1px solid #888;
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: auto auto auto;
+    margin-bottom: 1rem;
+    max-width: 349px;
+}
+#shop-mid{
+    padding: 10px;
+    margin: auto;
+    max-width: 350px;
+    width: 100%;
+}
+#shop-box{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.kurv{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.img-shop {
+    width: 100%;
+    height: auto;
+}
+
+.pro-sec {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.pro-sec a{
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: start;
+}
+.p-pris{
+    margin: 0;
+    text-align: start;
+}
+.p-farge{
+    margin-bottom: 2rem;
+    margin-top: 0;
+    text-align: start;
 }
 
 
+.str-ant {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.str{
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    width: 60px;
+}
+
+.ant{
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.iko-sec {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 20px 0px;
+}
 
 
-
-
+#opp-lin{
+    outline: 1px solid #888;
+    margin-bottom: 1rem;
+}
+#opp-mid{
+    padding: 20px;
+    margin: auto;
+    max-width: 800px;
+}
+#opp-title{
+    margin-top: 2rem;
+}
 
 #opplysnings-box {
-    outline: 1px solid #888;
-    border-radius: 8px;
-    width: 900px; /* Juster bredde på selve boksen*/
-    padding: 20px 30px;
-    margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: auto auto auto;
-    place-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; 
 }
 #opplysnings-box h2{
     grid-column-start: 2;
@@ -116,98 +225,117 @@ main{
 .opplysning-title{
     text-align: left;
     margin-bottom: 10px;
+    margin-top: 50px;
     width: 100%;
     grid-column-start: 2;
     grid-row-start: 2;
 }
 .seksjon-opp{
     margin-bottom: 20px;
+    grid-column: 1;
+    grid-row: 1/2;
 } 
-
-#opplysnings-box form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* Mellomrom mellom feltene */
+.seksjon-opp2{
+    margin-bottom: 20px;
+    grid-column:1/4;
+    grid-row: 2/3;
 }
+
+
 #opplysnings-box label {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 10px;
+    text-align: left;
 }
 .liten-box{
     padding: 10px;
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 195px;
+    width: 100%;
 }
 .stor-box{
     padding: 10px;
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 400px;
+    width: 100%;
 }
 #navn-box, #post-box {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
+    flex-direction: column;
 }
 #opplysnings-box input[type="submit"] {
     background-color: #333;
     color: #fff;
     border: none;
     padding: 12px;
-    width: 400px;
+    width: 100%;
+    margin-top: 15px;
 }
 #avbryt{
     display: block;
-    margin-top: 10px;
+    margin: 10px;
     text-align: center;
     font-size: 14px;
+    grid-column: 1;
+    grid-row: 4;
 }
-
+#lev-lin{
+    outline: 1px solid #888;
+    margin-bottom: 1rem;
+}
+#lev-mid{
+    padding: 20px;
+    margin: auto;
+    max-width: 800px;
+    text-align: start;
+}
+#lev-title{
+    margin-top: 2rem;
+}
 #levering-box{
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: auto auto auto;
-    outline: 1px solid #888;
-    border-radius: 8px;
-    width: 900px; /* Juster bredde på selve boksen*/
-    padding: 20px 30px;
-    margin: 0 auto;
-    align-items: center; 
-}
-#levering-box h2{
-    grid-column-start: 2;
-    grid-row-start: 1;
-}
-#leveringsvalg{
-    grid-column-start: 2;
-    grid-row-start: 2;
+    grid-template-rows: auto auto auto; 
 }
 
+#leveringsvalg{
+    grid-column:1/4;
+    grid-row: 1;
+}
+.lev-bol{
+    font-weight: bold;
+    font-size: 13px;
+}
+#lev-for{
+    display: grid;
+    grid-column: 1/4;
+    grid-row: 2;
+    text-align: start;
+}
 
 /* Styling for selve leveringsboksene */
 .levering-b {
-    flex-direction: column;
-    align-items: flex-start;
     position: relative;
-    gap: 10px;
     border: 1px solid #888;
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
-    width: 500px;
-    display: grid;
-    grid-column-start: 2;
-    grid-row-start: 3;
+    width: auto;
+    text-align: start;
 }
 
 
 .levering-ikon {
     display: flex; /* Plasserer ikon og pris side om side */
+    flex-wrap: wrap;
     align-items: center; /* Sentraliserer vertikalt */
     justify-content: flex-start;
     position: absolute;
@@ -222,6 +350,8 @@ main{
 .levering-ikon p {
     margin: 0;
     font-size: 16px;
+    display: flex;
+    gap: 5px;
 }
 .levering-dag{
     font-weight: bold;
@@ -232,24 +362,28 @@ main{
 
 /* Styling for ekstra leveringsinfo */
 .levering-info {
-    font-size: 12px;
+    font-size: 15px;
     margin: 0;
 }
 
 
-
+#bet-lin{
+    outline: 1px solid #888;
+    margin-bottom: 1rem;
+}
+#bet-mid{
+    padding: 20px;
+    margin: auto;
+    max-width: 800px;
+}
+#bet-title{
+    margin-top: 2rem;
+}
 /* Betalingsseksjon som et grid */
 #betaling-box {
     display: grid;
-    grid-template-rows: auto auto auto auto auto auto;
     grid-template-columns: 1fr 3fr 1fr;
-    gap: 20px;
-    outline: 1px solid #888;
-    border-radius: 8px;
-    width: 900px;
-    padding: 30px;
-    margin: 0 auto;
-    text-align: center;
+    grid-template-rows: auto auto auto;
 }
 
 /* Tittel "4. BETALING" */
@@ -257,15 +391,15 @@ main{
     grid-column-start: 2; /* Spenner over begge kolonner */
     font-size: 1.8rem;
     font-weight: bold;
-    text-align: left;
-   
+    text-align: left;  
 }
 
 /* "Betal med kort"-linjen */
 #betal {
-    grid-column-start: 2; /* Spenner over begge kolonner */
-    grid-row-start: 2;
+    grid-column: 1/4; /* Spenner over begge kolonner */
+    grid-row: 1;
     display: flex;
+    flex-wrap: wrap;
     font-size: 18px;
     font-weight: bold;
     gap: 10px;
@@ -273,16 +407,19 @@ main{
 
 /* Skjemaet */
 #betaling-form {
-    grid-column-start: 2; /* Spenner over begge kolonner */
+    grid-column-start: 1; /* Spenner over begge kolonner */
+    grid-column-end: 4;
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr; /* To kolonner */
+    grid-template-columns: 1fr  1fr 1fr 1fr; /* To kolonner */
     gap: 20px;
     width: 100%;
+    text-align: start;
 }
 
 /* Form-elementer */
 #betaling-form label {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     font-size: 14px;
     font-weight: bold;
@@ -290,7 +427,6 @@ main{
 
 /* Betalingsinfo og Totalbeløp */
 .betaling-mva {
-   
     text-align: center;
     font-size: 16px;
     color: #555;
@@ -302,17 +438,22 @@ main{
     text-align: bottom;
     font-size: 26px;
     font-weight: bold;
-    margin: 10px 0;
+    margin: 0;
+    padding-top: 52px;
 }
-.betaling-mva .betaling-total{
-    grid-column-start: 2;
-    grid-row-start: 3;
+.betaling-mva{
+    grid-column: 2/4;
+    grid-row: 4/5;
+} 
+.betaling-total{
+    grid-column: 2/4;
+    grid-row: 4/5;
 }
 
 /* Fullfør-knapp */
 #betaling-box a {
     grid-column: 1/5;
-    grid-row-start: 5;
+    grid-row: 5;
     background-color: #333;
     color: #fff;
     border: none;
@@ -329,28 +470,33 @@ main{
 
 /* Bekreftelsestekst */
 .betaling-info {
-    grid-column-start: 1;
-    grid-row-start: 6;
-    font-size: 14px;
+    grid-column: 1/5;
+    grid-row: 6;
+    font-size: 16px;
     color: #555;
     margin: 10px 0 20px 0;
+    text-align: center;
 }
 
 /* Terms-seksjonen */
 #betaling-terms {
-    grid-column-start: 1;
+    grid-column: 2/4;
     grid-row-start: 7;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     gap: 10px;
     width: 100%;
+    padding-bottom: 5rem;
 }
 
 #betaling-terms label {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 10px;
     font-size: 14px;
+    text-align: center;
 }
 #betaling-terms input[type="checkbox"] {
     margin: 0; /* Sørger for at sjekkboksen ikke har ekstra margin */
@@ -376,13 +522,13 @@ main{
     text-align: left;
 }
 .utlopsdato{
-    grid-column: 1/3;
+    grid-column: 1/5;
     grid-row-start: 2;
     
 }
 .cvc{
-    grid-column: 3/5;
-    grid-row-start: 2;
+    grid-column: 1/5;
+    grid-row-start: 3;
 }
 
 
@@ -397,19 +543,20 @@ main{
 
 
 footer{
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-column: 1;
+    grid-row: 3/4;
 }
 hr{
     border-bottom: 1px solid #888; 
 }
-footer{
+footer{ 
     height: 500px;
     color: rgb(0, 0, 0);
-    padding: 3rem;
+    padding: 1rem;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 footer p{
     margin: 0.5rem;
@@ -423,7 +570,6 @@ footer a{
 }
 .logo-footer{
     width: 100%;
-    padding-top: 2rem;
     padding-bottom: 1rem;
 }
 .logo-footer h3{
@@ -436,15 +582,19 @@ footer a{
 }
 .info-footer{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between; /* Legger mellomrom mellom seksjonene */
-    gap: 10px; /* Alternativ: definer mellomrom med gap */
+    gap: 3rem; /* Alternativ: definer mellomrom med gap */
+    flex-direction: column;
 }
+
+
 .kontakt-footer{
-    width: 50%;
-    align-items: center;
+    width: 100%;
 }
 .kontakt-ikon{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 .kontakt-ikon .bold-text {
@@ -461,48 +611,58 @@ footer a{
 }
 .snarvei-footer a{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     padding: 0.5rem 0;
 }
 .sosiale-footer{
-    width: 25%;
+    width: 100%;
+    padding-bottom: 50px;
 }
 .sosiale-footer a{
     padding: 0.5rem;
 } 
 
-#banner{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: rgb(212, 212, 212);
-    justify-content: space-between;
-    text-align: end;
-}
 
+
+
+#banner{
+    display: block;
+    background-color: rgb(212, 212, 212);
+    text-align: end;
+    padding: 2rem 1rem;
+}
+#banner p{
+    padding-bottom: 1rem;
+}
 #banner a{
     text-decoration: none;
     background-color: white;
+    padding: 10px;
     color: #000000;
 }
 
 #pro-ingress{
     text-align: center;
+    margin-bottom: 1rem;
 }
 .button-pro2{
     background-color: #333;
     color: #fff;
     border: none;
-    padding: 15px;
+    padding: 11px;
     border-radius: 50px;
     text-align: center;
+    font-size: small;
 }
 .button-pro{
     color: #000000;
     outline: 1px solid #888;
     border: none;
-    padding: 15px;
+    padding: 11px;
     border-radius: 50px;
     text-align: center;
+    font-size: small;
 }
 .button-pro2:hover{
     background-color: rgb(193, 193, 193);
@@ -512,23 +672,25 @@ footer a{
 }
 .button-group{
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
     gap: 10px;
-    margin-top: 15px;
+    width: 100%;
 }
 .product-space{
-     display: grid;
-     grid-template-columns: 1fr 1fr 1fr;
-     justify-content: center;
-     padding: 15px;
-     gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
 }
 .product-card{
-    max-width: 350px;
-    min-width: 200px;
     width: 100%;
+    padding: 1rem;
     border-radius: 4px;
-    padding: 1rem; 
+    border: 1px solid #ccc;
+    text-align: center;
 }
 .product-card a{
     text-decoration: none;
@@ -537,10 +699,37 @@ footer a{
 }
 .product-card img{
     width: 100%;
-    max-width: 300px;
+    max-width: 200px;
     border-radius: 10%;
     object-fit: cover;
     aspect-ratio: 1/1;
+    margin: auto;
+}
+#pro-ingress h2{
+    padding-top: 1rem;
+}
+
+.pro-pro{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.pro-name{
+    text-align: left;
+}
+.pro-pris{
+    text-align: right;
+}
+.pro-rev{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3px;
+}
+.reviews{
+    font-weight: 600;
 }
 
 
@@ -549,60 +738,98 @@ footer a{
 
 
 #kate-grid{
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     gap: 10px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    padding: 1rem;
+}
+.category1, .category2, .category3, .category4, .category5 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
     text-align: center;
-    padding: 30px 0;
-
-    grid-template-areas: 
-    "title title title"
-    "kate1 kate2 kate3"
-    "kate4 kate4 kate3"
-    "kate4 kate4 kate5";
+    color: #fff;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
 }
 
 #kategorier{
    grid-area: title;
+   padding-top: 1rem;
+   padding-bottom: 1rem;
 }
 .category1{
     grid-area: kate1;
-    background-image: url("/img/kategori1.jpg")
+    background-image: url("../img/kategori1.jpg"); /*Image by <a href="https://pixabay.com/users/corgaasbeek-905824/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=841676">Cor Gaasbeek</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=841676">Pixabay</a>*/
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    padding: 5rem;
 }
 .category2{
     grid-area: kate2;
-    background-image: url("/img/kategori2.jpg")
+    background-image: url("../img/kategori2.jpg"); /*Image by <a href="https://pixabay.com/users/barbeeanne-516629/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6254293">Anne and Saturnino Miranda</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6254293">Pixabay</a>*/
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    padding: 5rem;
 }
 .category3{
     grid-area: kate3;
-    background-image: url("/img/kategori3.jpg")
+    background-image: url("../img/kategori3.jpg"); /*Image by <a href="https://pixabay.com/users/bg242-1447544/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=991215">Bettina Güber</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=991215">Pixabay</a>*/
+    background-size: 150%;
+    background-position: center;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    padding: 5rem;
 }
 .category4{
     grid-area: kate4;
-    background-image: url("/img/kategori4.jpg")
+    background-image: url("../img/kategori4.jpg"); /*Image by <a href="https://pixabay.com/users/heikiwi-35444888/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8345799">Heike Tönnemann</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8345799">Pixabay</a>*/
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    padding: 5rem;
 }
 .category5{
     grid-area: kate5;
-    background-image: url("/img/kategori5.jpg")
+    background-image: url("../img/kategori5.jpg"); /*Image by <a href="https://pixabay.com/users/mareefe-2090044/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4240129">Mareefe</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4240129">Pixabay</a>*/
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    text-align: center;
+    color: #ffffff;
+    padding: 5rem;
 }
 
-
+#anme-ove{
+    padding-top: 2rem;
+}
 #anmelde-box{
     display: flex;
     flex-wrap: nowrap;
+    flex-direction: column;
     overflow-x: auto;
     gap: 10px;
     padding: 10px;
 }
 .anme-card{
-    flex: 0 0 auto;
-    max-width: 350px;
-    min-width: 200px;
     width: 100%;
     border: 1px solid #ccc;
     border-radius: 10%;
     padding: 1rem;
+    text-align: center;
 }
 .anme-card img{
     width: 90px;
@@ -610,4 +837,6 @@ footer a{
     border-radius: 50%;
     object-fit: cover;
     aspect-ratio: 1/1;
+    margin: auto;
 }
+

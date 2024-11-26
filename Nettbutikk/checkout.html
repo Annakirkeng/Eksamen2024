@@ -33,17 +33,22 @@
         </header>
         <main>
             <h2 id="kasse">Kasse</h2>
-            <section id="shopping-box">
+            <section id="shop-lin">
+            <section id="shop-mid">
+                <section id="shopping-title">
                 <h2>1.SHOPPINGBAGEN DIN</h2>
-                <article>
-                    <img src="img/dress427x640.jpg" alt="dress">
+                </section>
+                <section id="shopping-box">
+                <article class="kurv">
+                    <img src="img/dress427x640.jpg" alt="dress" class="img-shop">
                     <!--Image by <a href="https://pixabay.com/users/luissteven-17242598/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6466382">Luis Steven</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6466382">Pixabay</a>-->
-                    <a href="product.html">Product name</a>
-                    <p>Kr 15 999</p>
-                    <p>Farge: Beige</p>
-
+                    <section class="pro-sec">
+                    <a href="product.html">PRODUCT NAME</a>
+                    <p class="p-pris">Kr 15 999</p>
+                    <p class="p-farge">Farge: White</p>
+                    <section class="str-ant">
                     <form>
-                        <select name="size"> 
+                        <select name="size" class="str"> 
                             <option value="Velg størrelse">Velg størrelse</option>
                             <option value="XS">XS</option>
                             <option value="S">S</option>
@@ -53,21 +58,27 @@
                         </select> 
                         <label>
                             Antall
-                            <input type="number" name="number" placeholder="1" max="10" min="1">
+                            <input class="ant" type="number" name="number" placeholder="1" max="10" min="1">
                         </label>
+                    </form>
+                    </section>
+                    <section class="iko-sec">
                         <i class="fa-solid fa-heart"></i>
                         <i class="fa-solid fa-trash"></i>
-                    </form>
+                    </section>
+                    </section>
                 </article>
-                <article>
-                    <img src="img/dress427x640.jpg" alt="dress">
-                    <!--Image by <a href="https://pixabay.com/users/luissteven-17242598/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6466382">Luis Steven</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6466382">Pixabay</a>-->
-                    <a href="product.html">Product name</a>
-                    <p>Kr 15 999</p>
-                    <p>Farge: Beige</p>
 
+                <article class="kurv">
+                    <img src="img/dress427x640.jpg" alt="dress" class="img-shop">
+                    <!--Image by <a href="https://pixabay.com/users/luissteven-17242598/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6466382">Luis Steven</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6466382">Pixabay</a>-->
+                    <section class="pro-sec">
+                    <a href="product.html">PRODUCT NAME</a>
+                    <p class="p-pris">Kr 15 999</p>
+                    <p class="p-farge">Farge: White</p>
+                    <section class="str-ant">
                     <form>
-                        <select name="size"> 
+                        <select name="size" class="str"> 
                             <option value="Velg størrelse">Velg størrelse</option>
                             <option value="XS">XS</option>
                             <option value="S">S</option>
@@ -77,17 +88,27 @@
                         </select> 
                         <label>
                             Antall
-                            <input type="number" name="number" placeholder="1" max="10" min="1">
+                            <input class="ant" type="number" name="number" placeholder="1" max="10" min="1">
                         </label>
+                    </form>
+                    </section>
+                    <section class="iko-sec">
                         <i class="fa-solid fa-heart"></i>
                         <i class="fa-solid fa-trash"></i>
-                    </form>
+                    </section>
+                    </section>
                 </article>
+                </section>
+            </section>
             </section>
 
 
-            <section id="opplysnings-box">
+        <section id="opp-lin">
+        <section id="opp-mid">
+            <section id="opp-title">
                 <h2>2.DINE OPPLYSNINGER</h2>
+            </section>
+            <section id="opplysnings-box">
                 <section class="seksjon-opp">
                 <p class="opplysning-title">Leveringsadresse</p>
                 <form method="post">
@@ -117,7 +138,7 @@
                     </section>
                 </form> 
                 </section>
-                <section class="seksjon-opp">
+                <section class="seksjon-opp2">
                     <p class="opplysning-title">Kontaktinformasjon</p>
                 <form>
                     <label>
@@ -135,19 +156,25 @@
                 </section>
                 <a href="#" id="avbryt">Avbryt</a>
             </section>
+        </section>
+        </section>
 
-            <section id="levering-box">
+        <section id="lev-lin">
+        <section id="lev-mid">
+            <section id="lev-title">
                 <h2>3.LEVERING</h2>
-                <p id="leveringsvalg">LEVERINGSVALG</p>
-                <form method="post">
+            </section>
+                <section id="levering-box">
+                <p id="leveringsvalg"><span class="lev-bol">LEVERINGSVALG</span></p>
+                <form method="post" id="lev-for">
                     <section class="levering-b">
+
                     <label>
                         <input type="radio" name="valg" required>
-                        Express Hjemlevering:
+                        <span class="lev-bol">Express Hjemlevering:</span>
                     </label>
                         <section class="levering-ikon">
-                        <p>59 kr</p>
-                        <i class="fa-solid fa-truck"></i>
+                        <p>59 kr<i class="fa-solid fa-truck"></i></p>
                         </section>
                         <p class="levering-dag">3-4 Virkedager</p>
                         <p class="levering-info">bestill hverdag før 08:00 for levering neste arbeidsdag. Leveres hjem til deg før frokost mandag til lørdag. For levering til postnummer 4000-7999 er leveringstiden 2 arbeidsdager, for postnummer 8000-9999 er leveringstiden 3 arbeidsdager.</p>
@@ -155,32 +182,35 @@
                     <section class="levering-b">
                     <label>
                         <input type="radio" name="valg" required>
-                        Express Pakke til utleveringssted:
+                        <span class="lev-bol">Express Pakke til utleveringssted:</span>
                     </label>
                     <section class="levering-ikon">
-                    <p>59 kr</p>
-                    <i class="fa-brands fa-dhl"></i>
+                    <p>59 kr<i class="fa-brands fa-dhl"></i></p>
                     </section>
                     <p class="levering-dag">1-3 Virkedager</p>
                     </section>
                     <section class="levering-b">
                     <label>
                         <input type="radio" name="valg" required>
-                        Standard Hjemlevering:
+                        <span class="lev-bol">Standard Hjemlevering:</span>
                     </label>
                         <section class="levering-ikon">
-                        <p>Gratis</p>
-                        <i class="fa-solid fa-box"></i>
+                        <p>Gratis<i class="fa-solid fa-box"></i></p>
                         </section>
                         <p class="levering-dag">5-8 Virkedager</p>
                         <p class="levering-info">Leveres hjem til deg før frokost mandag til lørdag innen 4-7 hverdager.</p>
                     </section>
                 </form>
             </section>
+        </section>
+        </section>
 
-
-            <section id="betaling-box">
-                <h2>4.BETALING</h2>
+            <section id="bet-lin">
+            <section id="bet-mid">
+                <section id="bet-title">
+                    <h2>4.BETALING</h2>
+                </section>
+                <section id="betaling-box">
                 <p id="betal">BETAL MED KORT <i class="fa-solid fa-credit-card"></i></p>
                 <form id="betaling-form" method="post">
                     <label class="kortnummer">
@@ -211,6 +241,8 @@
                     </section>
                     </form>
                 </section>
+            </section>
+            </section>
         </main>
         
         <footer> 
@@ -223,20 +255,31 @@
             <section class="kontakt-footer">
                 <h3>KONTAKT</h3>
                 <section class="kontakt-ikon">
-                <i class="fa-solid fa-location-dot"></i>
-                <p><span class="bold-text">Adresse:</span> B R A Veien 4, 1757 Halden</p>
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span class="bold-text">Adresse:</span> B R A Veien 4, 1757 Halden
+                </p>
                 </section>
+
                 <section class="kontakt-ikon">
-                <i class="fa-solid fa-phone"></i>
-                <p><span class="bold-text">Telefon:</span> 69 60 80 00</p>
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    <span class="bold-text">Telefon:</span> 69 60 80 00
+                </p>
                 </section>
+
                 <section class="kontakt-ikon">
-                <i class="fa-solid fa-envelope"></i>
-                <p><span class="bold-text">E-post:</span> halden@hiof.no</p>
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    <span class="bold-text">E-post:</span> halden@hiof.no
+                </p>
                 </section>
+
                 <section class="kontakt-ikon">
-                <i class="fa-solid fa-clock"></i>
-                <p><span class="bold-text">Åpningstider:</span> Stenger 15:00</p>
+                <p>
+                    <i class="fa-solid fa-clock"></i>
+                    <span class="bold-text">Åpningstider:</span> Stenger 15:00
+                </p>
                 </section>
             </section>
                 
