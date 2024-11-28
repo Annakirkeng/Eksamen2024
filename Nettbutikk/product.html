@@ -19,10 +19,10 @@
             <nav class="main-menu">
                 <ul>
                     <li><a href="index.html">Hjem</a></li>
-                    <li><a href="index.html#produkter">Produkter</a></li>
+                    <li><a href="index.html#pro-ingress">Produkter</a></li>
                     <li><a href="index.html"><h1>LOGO</h1></a></li>
-                    <li><a href="#index.htmlkategorier">Kategorier</a></li>
-                    <li><a href="#kontakt">Kontakt oss</a></li>
+                    <li><a href="index.html#kate-grid">Kategorier</a></li>
+                    <li><a href="product.html#logo-footer">Kontakt oss</a></li>
                 </ul>
             </nav>
             <section class="menu-ikon">
@@ -33,25 +33,28 @@
         </header>
         <main>
             <nav>
-                <ul>
+                <ul id="smulesti">
                     <li><a href="index.html">Hjem ></a></li>
                     <li><a href="index.html#kategorier">Kategorier ></a></li>
-                    <li>Produktnavn</li>
+                    <li><span>Produktnavn</span></li>
                 </ul>
             </nav>
-            <img src="img/dress854x1280.jpg" alt="dress">
+            <section id="stor-sma-img">
+            <img src="img/dress854x1280.jpg" alt="dress" id="stor-bilde">
             <!--Image by <a href="https://pixabay.com/users/luissteven-17242598/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6466382">Luis Steven</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6466382">Pixabay</a>-->
-            <img src="img/dress427x640.jpg" alt="dress">
-            <img src="img/dress427x640.jpg" alt="dress">
-            <img src="img/dress427x640.jpg" alt="dress">
+            <img src="img/dress427x640.jpg" alt="dress" class="sma-bilde1">
+            <img src="img/dress427x640.jpg" alt="dress" class="sma-bilde2">
+            <img src="img/dress427x640.jpg" alt="dress" class="sma-bilde3">
             <!--Image by <a href="https://pixabay.com/users/luissteven-17242598/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6466382">Luis Steven</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6466382">Pixabay</a>-->
+            </section>
 
-            <section>
+            <section id="pro-info-side">
                 <h2>Produktnavn</h2>
-                <a href="#">MERKENAVN</a>
+                <section id="pro-info">
+                <a href="#" id="pro-info-merkenavn">MERKENAVN</a>
                 <p>15 999 kr inkl. mva.</p>
-                <p>Farge: Beige</p>
-
+                <p>Farge: White</p>
+                </section>    
                 <form>
                     <select name="size"> 
                         <option value="Velg størrelse">Velg størrelse</option>
@@ -62,41 +65,50 @@
                         <option value="XL">XL</option>
                     </select>
                 </form>
-                <a href="#">Legg til i handlekurv</a>
+                <section id="handle-heart">
+                <a href="#" id="pro-info-kurv">Legg til i handlekurv</a>
                 <i class="fa-regular fa-heart"></i>
+                </section>
             </section>
             <section>
                 <h2>Lignende produkter</h2>
-                <article>
+                <article class="lik-card">
                     <img src="img/arrow.jpg" alt="a woman with a bow and arrow">
                     <!--Image by <a href="https://pixabay.com/users/marvols-13376406/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8451788">Marvols</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8451788">Pixabay</a>-->
-                    <a href="product.html">Product name</a>
-                    <p>Kr 12 999</p>
+                    <section class="lik-info">
+                    <a href="product.html" class="lik-name">Product name</a>
+                    <p class="lik-pris">Kr 12 999</p>
+                    </section>
                 </article>
-                <article>
+                <article class="lik-card">
                     <img src="img/arrow.jpg" alt="a woman with a bow and arrow">
                     <!--Image by <a href="https://pixabay.com/users/marvols-13376406/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8451788">Marvols</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8451788">Pixabay</a>-->
-                    <a href="product.html">Product name</a>
-                    <p>Kr 12 999</p>
+                    <section class="lik-info">
+                        <a href="product.html" class="lik-name">Product name</a>
+                        <p class="lik-pris">Kr 12 999</p>
+                    </section>
                 </article>
-                <article>
+                <article class="lik-card">
                     <img src="img/arrow.jpg" alt="a woman with a bow and arrow">
                     <!--Image by <a href="https://pixabay.com/users/marvols-13376406/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8451788">Marvols</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8451788">Pixabay</a>-->
-                    <a href="product.html">Product name</a>
-                    <p>Kr 12 999</p>
+                    <section class="lik-info">
+                        <a href="product.html" class="lik-name">Product name</a>
+                        <p class="lik-pris">Kr 12 999</p>
+                    </section>
                 </article>
-                <article>
+                <article class="lik-card">
                     <img src="img/arrow.jpg" alt="a woman with a bow and arrow">
                     <!--Image by <a href="https://pixabay.com/users/marvols-13376406/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8451788">Marvols</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8451788">Pixabay</a>-->
-                    <a href="product.html">Product name</a>
-                    <p>Kr 12 999</p>
+                    <section class="lik-info">
+                        <a href="product.html" class="lik-name">Product name</a>
+                        <p class="lik-pris">Kr 12 999</p>
+                    </section>
                 </article>
             </section>
         </main>
         
         <footer>
-            <hr> 
-            <section class="logo-footer">
+            <section id="logo-footer">
                 <a href="index.html"><h3>Logo</h3></a>
                 <p>Aut reiciendis voluptatibus maiores</p>
             </section>
@@ -123,10 +135,10 @@
                 
             <section class="snarvei-footer">
                 <h3>SNARVEIER</h3>
-                <a href="#">Produkter</a>
-                <a href="#">Kategorier</a>
-                <a href="#">Kontakt oss</a>
-                <a href="#">Tilgjelighetserklæring</a>
+                <a href="index.html#pro-ingress">Produkter</a>
+                <a href="index.html#kate-grid">Kategorier</a>
+                <a href="product.html#logo-footer">Kontakt oss</a>
+                <a href="https://hiof-my.sharepoint.com/:b:/g/personal/amholmen_hiof_no/EVWYv_P3p0JPjYvgPccrFxwBsw291gUPzXJCfe0fW68bQg?e=Jj7jLc">Tilgjelighetserklæring</a>
             </section>
     
             <section class="sosiale-footer">

@@ -12,7 +12,6 @@ body{
 
 h2{
     font-size: 22px;
-    text-align: center;
 }
 
 #grid-container{
@@ -28,12 +27,13 @@ h2{
     grid-row: 1;
     max-width: 349px;
 }
+
 #global-header{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
+    padding: 20px 1rem 1rem 1rem;
     margin: 0;
     gap: 1rem;
 }
@@ -312,7 +312,7 @@ main{
 }
 .lev-bol{
     font-weight: bold;
-    font-size: 13px;
+    font-size: 14px;
 }
 #lev-for{
     display: grid;
@@ -349,20 +349,20 @@ main{
 /* Styling for prisen */
 .levering-ikon p {
     margin: 0;
-    font-size: 16px;
+    font-size: 13px;
     display: flex;
     gap: 5px;
 }
 .levering-dag{
     font-weight: bold;
     color: #979797;
-    font-size: small;
+    font-size: 12px;
 }
 
 
 /* Styling for ekstra leveringsinfo */
 .levering-info {
-    font-size: 15px;
+    font-size: 12px;
     margin: 0;
 }
 
@@ -568,15 +568,15 @@ footer a{
     color: rgb(4, 3, 3);
     text-decoration: none;
 }
-.logo-footer{
+#logo-footer{
     width: 100%;
     padding-bottom: 1rem;
 }
-.logo-footer h3{
+#logo-footer h3{
     font-size: 2rem;
     margin: 0;
 }
-.logo-footer p{
+#logo-footer p{
     padding-top: 1rem;
     margin: 0;
 }
@@ -618,6 +618,8 @@ footer a{
 .sosiale-footer{
     width: 100%;
     padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
 }
 .sosiale-footer a{
     padding: 0.5rem;
@@ -650,7 +652,7 @@ footer a{
     background-color: #333;
     color: #fff;
     border: none;
-    padding: 11px;
+    padding: 10px;
     border-radius: 50px;
     text-align: center;
     font-size: small;
@@ -659,7 +661,7 @@ footer a{
     color: #000000;
     outline: 1px solid #888;
     border: none;
-    padding: 11px;
+    padding: 10px;
     border-radius: 50px;
     text-align: center;
     font-size: small;
@@ -675,7 +677,7 @@ footer a{
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     width: 100%;
 }
 .product-space{
@@ -833,10 +835,146 @@ footer a{
 }
 .anme-card img{
     width: 90px;
-    max-width: 90px;
+    max-width: 150px;
     border-radius: 50%;
     object-fit: cover;
     aspect-ratio: 1/1;
     margin: auto;
 }
+
+
+#smulesti{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 2px;
+    margin: 0;
+    gap: 8px;
+}
+#smulesti a{
+    color: #000000;
+    text-decoration: none;
+}
+#smulesti li{
+    font-size: 13px;
+    color: #000000;
+}
+
+li span{
+    font-weight: bold;
+}
+
+#smulesti img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+#stor-sma-img img{
+    width: 100%;
+}
+
+#stor-sma-img{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+    align-items: start;
+    padding-top: 1rem;
+}
+
+
+#pro-info-side{
+    padding: 10px;
+}
+#pro-info-side h2{
+    font-size: 1.5rem;
+    margin: 10px 0;
+    text-align: start;
+}
+
+
+#pro-info-side{
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+#pro-info{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    flex-direction: column;
+    text-align: start;
+    padding: 6px 0px;
+}
+
+#pro-info-side form select{
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    margin: 10px 0;
+}
+#pro-info-merkenavn{
+    color: #555;
+}
+
+#pro-info-kurv{
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 67%;
+}
+
+#pro-info-side i{
+    display: block;
+    text-align: center;
+    font-size: 17px;
+    margin-top: 10px;
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 5px;
+    width: 18%;
+}
+.lik-card{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: center;  
+}
+.lik-card img{
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    margin: auto;
+}
+.lik-info{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 52px;
+    max-width: 86%;
+    padding-left: 23px;
+    padding-top: 15px;
+    padding-bottom: 35px;
+}
+.lik-card a {
+    text-decoration: none;
+    color: #000000;
+}
+#handle-heart{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+
+
+
 
